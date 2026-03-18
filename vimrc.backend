@@ -1,0 +1,13 @@
+if !exists('g:loaded_custom_vimrc')
+  execute 'source' fnameescape(expand('<sfile>:p:h') . '/vimrc')
+endif
+
+" Backend-specific mappings and tweaks for Python and web development
+
+" Test runner shortcuts (pytest)
+augroup backend_python_test
+  autocmd!
+  autocmd Filetype python nnoremap <buffer> <F9> :write<cr> :exec '!python3' shellescape(@%, 1)<cr>
+  autocmd Filetype python nnoremap <buffer> <F8> :write<cr> :exec '!pytest -vvv ' . shellescape(@%, 1)<cr>
+augroup END
+

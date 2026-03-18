@@ -1,47 +1,62 @@
+if exists('g:loaded_custom_vimrc')
+  finish
+endif
+let g:loaded_custom_vimrc = 1
+
+" Core UI and editing options
 set nowrap
 set number
+set relativenumber
 set hlsearch
+set ignorecase
+set smartcase
 set clipboard=unnamedplus
-filetype off                  " required
+set hidden
+set splitbelow
+set splitright
+set foldmethod=indent
+set foldlevel=79
+set colorcolumn=79
+set textwidth=200
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set cindent
+set noexpandtab
+set cursorline
+set lazyredraw
+set synmaxcol=160
+syntax sync minlines=256
+
+filetype off
 
 call plug#begin('~/.vim/plugged')
-" Specify a directory for plugins call plug#begin('~/.vim/plugged')
 
+" Core plugins
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'plasticboy/vim-markdown'
+Plug 'liuchengxu/space-vim-dark'
+
+" Backend / Python / web
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'python-rope/ropevim'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'plasticboy/vim-markdown'
 Plug 'mgedmin/coverage-highlight.vim'
 Plug 'tell-k/vim-autopep8'
-Plug 'liuchengxu/space-vim-dark'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
-" Odin
+" Odin / Haskell
 Plug 'https://github.com/habamax/vim-odin'
-
-" Haskell
 " Plug 'neovimhaskell/haskell-vim'
-
-" To be removed
-"Plug 'kien/ctrlp.vim'
-"Plug 'jistr/vim-nerdtree-tabs'
-"Plug 'godlygeek/tabular'
-"Plug 'itchyny/lightline.vim'
-"
-" Ocaml
-"Plug 'scrooloose/syntastic'
-"Plug 'def-lkb/merlin'
-"Plug 'jpalardy/vim-slime'
-"Plug 'OCamlPro/ocp-indent'
 
 call plug#end()
 
 syntax on
-filetype plugin indent on    " required
+filetype plugin indent on
 
 " You can use the 'formatoptions' option  to influence how Vim formats text.
 " 'formatoptions' is a string that can contain any of the letters below.  The
@@ -68,8 +83,6 @@ setlocal spell spelllang=en_us
 set nospell
 
 " split and navigation
-set splitbelow
-set splitright
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>

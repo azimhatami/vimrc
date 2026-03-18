@@ -1,0 +1,19 @@
+if !exists('g:loaded_custom_vimrc')
+  execute 'source' fnameescape(expand('<sfile>:p:h') . '/vimrc')
+endif
+
+" DevOps-specific plugins (add via vim-plug in core if desired)
+" Examples: Docker, Kubernetes, Terraform, Ansible, Git helpers
+" These are left as suggestions; uncomment and install as needed:
+" Plug 'tpope/vim-fugitive'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'ekalinin/Dockerfile.vim'
+" Plug 'pearofducks/ansible-vim'
+" Plug 'hashivim/vim-terraform'
+
+" DevOps key mappings
+nnoremap <leader>kd :!kubectl describe -f %<CR>
+nnoremap <leader>ka :!kubectl apply -f %<CR>
+nnoremap <leader>tf :!terraform fmt %<CR>
+nnoremap <leader>tp :!terraform plan<CR>
+
