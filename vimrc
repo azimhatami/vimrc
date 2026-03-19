@@ -39,7 +39,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'plasticboy/vim-markdown'
 Plug 'liuchengxu/space-vim-dark'
 
-" Backend / Python / web
+" Backend / Python / web / JS / TS
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/indentpython.vim'
@@ -48,6 +48,10 @@ Plug 'mgedmin/coverage-highlight.vim'
 Plug 'tell-k/vim-autopep8'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Odin / Haskell
 Plug 'https://github.com/habamax/vim-odin'

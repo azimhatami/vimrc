@@ -11,3 +11,11 @@ augroup backend_python_test
   autocmd Filetype python nnoremap <buffer> <F8> :write<cr> :exec '!pytest -vvv ' . shellescape(@%, 1)<cr>
 augroup END
 
+" JavaScript / TypeScript project helpers
+augroup backend_js_ts
+  autocmd!
+  autocmd FileType javascript,typescript,typescriptreact,tsx,jsx,vue nnoremap <buffer> <leader>rn :!npm run<Space>
+  autocmd FileType javascript,typescript,typescriptreact,tsx,jsx,vue nnoremap <buffer> <leader>nt :!npm test<CR>
+  autocmd FileType javascript,typescript,typescriptreact,tsx,jsx,vue nnoremap <buffer> <leader>nb :!npm run build<CR>
+augroup END
+
