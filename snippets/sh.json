@@ -1,0 +1,5 @@
+{
+  "Shebang (bash, strict)": { "prefix": ["#!", "shebang", "bash"], "body": ["#!/usr/bin/env bash", "set -euo pipefail", "", "$0"], "description": "bash shebang + strict mode" },
+  "Script dir": { "prefix": ["scriptdir"], "body": ["SCRIPT_DIR=\"\\$(cd \"\\$(dirname \"\\${BASH_SOURCE[0]}\")\" && pwd)\"", "$0"], "description": "directory of this script" },
+  "Usage": { "prefix": ["usage"], "body": ["usage() {", "\techo \"Usage: \\$(basename \"\\$0\") ${1:[options]}\" >&2", "\texit ${2:1}", "}", "$0"], "description": "usage() function" }
+}

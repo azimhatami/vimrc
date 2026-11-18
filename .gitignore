@@ -1,2 +1,35 @@
-# Vim
-.*.sw[op]
+# Installed plugins (restored by tools/bootstrap.sh from plug-snapshot.vim)
+/plugged/
+
+# Machine state: undo history, swap, backups, sessions
+/state/
+/snapshots/
+.netrwhist
+.viminfo
+viminfo
+*.sw[a-p]
+*~
+*.orig
+*.log
+.VimballRecord
+
+# Machine-specific overrides (template: local.vim.example)
+/local.vim
+
+# Spell additions are personal
+/spell/
+
+# Never commit credentials
+.env
+.env.*
+*.token
+*.key
+*.pem
+
+# Tooling leftovers
+node_modules/
+__pycache__/
+.DS_Store
+
+# Personal, machine-specific documentation
+/docs/PERSONAL.md

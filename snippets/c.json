@@ -1,0 +1,4 @@
+{
+  "Main": { "prefix": ["main"], "body": ["#include <stdio.h>", "", "int main(${1:void})", "{", "\t${0}", "\treturn 0;", "}"], "description": "main() with stdio" },
+  "Include guard": { "prefix": ["guard", "once"], "body": ["#ifndef ${1:${TM_FILENAME/[^A-Za-z0-9]/_/g}}", "#define $1", "", "$0", "", "#endif /* $1 */"], "description": "header include guard" }
+}

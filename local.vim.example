@@ -1,0 +1,21 @@
+" ==============================================================================
+"  ~/.vim/local.vim — machine-specific overrides (copy this file to local.vim)
+"  Sourced by the vimrc BEFORE the modules, so feature switches take effect.
+"  Never overwritten by updates to the shared configuration.
+" ==============================================================================
+
+" let g:my_theme          = 'dark'    " 'space' (default) · 'dark' Catppuccin Mocha · 'light' Latte
+" let g:my_space_background = 'darker' " Space Vim Dark shade: 'default' · 'darker' · 'darkest'
+" let g:my_dashboard      = 0         " no start screen (plain empty editor beside the explorer)
+" let g:my_icons          = 0         " plain Unicode symbols (no Nerd Font)
+" let g:my_format_on_save = 0         " never format/trim on save
+" let g:my_clipboard_sync = 0         " yanks stay inside Vim
+" let g:my_largefile_mb   = 5         " lean-mode threshold in MB
+" let g:my_transparent    = 1         " let the terminal background show through
+" let g:my_indent_guides  = 0         " start with indent guides off
+" let g:my_explorer_autostart = 0     " don't open the explorer sidebar at startup
+" let g:my_explorer_width = 35        " sidebar width in columns (default 30)
+
+" Anything else (options, mappings) can go below and runs after the
+" modules — wrap it so it runs last:
+" autocmd VimEnter * ++once setlocal colorcolumn=100
